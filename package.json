@@ -1,0 +1,28 @@
+{
+  "name": "twitter-streaming-filter",
+  "version": "1.0.0",
+  "description": "Connect on Twitter Streaming API filter endpoint",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FranckErnewein/twitter-streaming-filter.git"
+  },
+  "keywords": [
+    "twitter",
+    "streaming",
+    "filter",
+    "stream"
+  ],
+  "author": "Franck Ernewein",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FranckErnewein/twitter-streaming-filter/issues"
+  },
+  "homepage": "https://github.com/FranckErnewein/twitter-streaming-filter",
+  "dependencies": {
+    "oauth": "^0.9.13"
+  }
+}
