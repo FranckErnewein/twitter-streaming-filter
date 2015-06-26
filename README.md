@@ -5,7 +5,7 @@ Connect on Twitter Streaming API filter endpoint
 ## Contribution
 
 to run test, define `./token.json` file with your oauth token
-```
+```json
 {
   "consumer_key": "xxxx",
   "consumer_secret_key": "XxxXX",
