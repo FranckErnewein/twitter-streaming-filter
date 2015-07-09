@@ -56,7 +56,8 @@ TwitterConnector.prototype._read = function() {
         self.push(chunk);
       });
       response.on('end', function() {
-        console.log('end');
+        self.push(null);
+        //console.log('end', arguments);
       });
       response.on('error', function(err) {
         self.emit('error', err);
