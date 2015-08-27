@@ -12,8 +12,8 @@ function TwitterConnector(options) {
   if (!options.consumer_key) {
     throw new Error('consumer_key is missing');
   }
-  if (!options.consumer_secret_key) {
-    throw new Error('consumer_secret_key is missing');
+  if (!options.consumer_key_secret) {
+    throw new Error('consumer_key_secret is missing');
   }
   if (!options.track && !options.locations) {
     throw new Error('define track or/and locations');
@@ -40,7 +40,7 @@ TwitterConnector.prototype._read = function() {
     var oauth = new OAuth('https://twitter.com/oauth/request_token',
       'https://twitter.com/oauth/access_token',
       options.consumer_key,
-      options.consumer_secret_key,
+      options.consumer_key_secret,
       '1.0A',
       null,
       'HMAC-SHA1');

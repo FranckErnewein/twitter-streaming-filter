@@ -1,6 +1,6 @@
 {
   "name": "twitter-streaming-filter",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Connect on Twitter Streaming API filter endpoint",
   "main": "index.js",
   "scripts": {
