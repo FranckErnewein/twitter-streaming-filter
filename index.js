@@ -30,9 +30,9 @@ TwitterConnector.prototype._read = function() {
     var APIParams = {};
     ['track', 'locations', 'language'].forEach(function(key) {
       var opt = options[key];
-      if(opt instanceof Array){
+      if (opt instanceof Array) {
         APIParams[key] = opt.join();
-      }else if(typeof opt === 'string'){
+      } else if (typeof opt === 'string') {
         APIParams[key] = opt;
       }
     });
@@ -49,9 +49,15 @@ TwitterConnector.prototype._read = function() {
       options.access_token,
       options.access_token_secret,
       APIParams);
+
     request.addListener('response', function(response) {
       self.response = response;
       response.setEncoding('utf8');
+      response.once('data', function(chunk) {
+        if (chunk[0] === '<') {
+          self.emit('error', chunk);
+        }
+      });
       response.on('data', function(chunk) {
         self.push(chunk);
       });
